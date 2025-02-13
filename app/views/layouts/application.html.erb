@@ -1,13 +1,78 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Link-in-bio</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
+  <style>
+    html {
+      min-height: 100%;
+    }
+    body {
+      color: black
+      min-height: 100%;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      background: linear-gradient(75deg, #ffe799, #ffd582, #ffc174, #ffac70, #ff9677, #ff8287, #ff709d, #ff61b5); /* made at https://learnui.design/tools/gradient-generator.html */
+      font-family: "Tahoma";
+    }
+    .avatar_img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 128px;
+      border: 2mm solid black;
+      display: flex;
+      align-items: center; 
+    }
+    .thumbnail {
+      width: 100px;
+      height: 100px;
+      border-radius: 100px;
+      object-fit: cover;
+      background-color: rgba(222, 136, 163, 0.5);
+      display: flex;
+      align-items: center;
+      border-radius: 1000px;
+    }
+    .item {
+      background-color: rgba(222, 136, 163, 0.5);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      border-radius: 1000px;
+    }
+    .social_icons_row {
+        background-color: rgba(222, 136, 163, 0.5);
+        border-radius: 1000px;
+    }
+    .main_container {
+      max-width: 640px;
+      width: 640px;
+      margin: auto;
+    }
+    .image_row {
+      margin-bottom: 20px;
+      text-align: center;
+      display: flex; /* Enables Flexbox */
+      justify-content: center; /* Centers content horizontally */
+      align-items: center; /* Centers content vertically */
+      margin-bottom: 20px;
+    }
+    .name_row {
+      margin-bottom: 20px;
+      text-align: center;
+      font-size: 25px;
+      font-weight: 900;
+    }
+    .social_icons_row {
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: space-around;
+    }
+    .link-text {
+      text-align: center;
+      flex-grow: 1;
+      text-decoration: none;
+    }
+  </style>
   </head>
 
   <body>
